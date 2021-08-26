@@ -1,0 +1,41 @@
+{
+  "android_package_name": "system.gulf",
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
+      "id": "system.gulf",
+      "platform": "chromeos_play"
+    }
+  ],
+  "name": "Sistema Administrativo",
+  "short_name": "Sistema",
+  "lang": "es-ES",
+  "description": "Sistema administrativo de Gulf",
+  "icons": [
+    { "src": "img/iconapp-44.png", "sizes": "44x44", "type": "image/png" }
+    ,{ "src": "img/iconapp-128.png", "sizes": "128x128", "type": "image/png" }
+    ,{ "src": "img/iconapp-152.png", "sizes": "152x152", "type": "image/png" }
+    ,{ "src": "img/iconapp-256.png", "sizes": "256x256", "type": "image/png" }
+  ],
+  "start_url": "./index.php",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#2E5897",
+  "theme_color": "#2E5897",
+    "shortcuts": [
+    {
+      "name": "How's weather today?",
+      "short_name": "Today",
+      "description": "View weather information for today",
+      "url": "/today?source=pwa",
+      "icons": [{ "src": "/img/iconapp-152.png", "sizes": "152x152" }]
+    },
+    {
+      "name": "How's weather tomorrow?",
+      "short_name": "Tomorrow",
+      "description": "View weather information for tomorrow",
+      "url": "/tomorrow?source=pwa",
+      "icons": [{ "src": "/img/iconapp-152.png", "sizes": "152x152" }]
+    }
+  ]
+}

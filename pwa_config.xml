@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PWA-config>
+  <appName>Sistema Administrativo</appName>
+  <appId>System</appId>
+  <appDesc>Sistema administrativo de Gulf</appDesc>
+  <appShortName>Sistema</appShortName>
+  <swTemplate></swTemplate>
+  <fileTypes>js,htm,html,css,png,gif,jpg,ttf,woff,eot,svg,json,php</fileTypes>
+  <ignoreFolders>img</ignoreFolders>
+  <lang>es-ES</lang>
+  <baseIcon>img/icon.png</baseIcon>
+</PWA-config>

@@ -1,0 +1,72 @@
+-- "system".gs_social definition
+
+-- Drop table
+
+-- DROP TABLE "system".gs_social;
+
+CREATE TABLE "system".gs_social (
+	gs_social_id serial NOT NULL,
+	ad_org_id int4 NOT NULL,
+	isactive varchar(1) NULL,
+	created timestamp(0) NULL,
+	createdby int4 NOT NULL,
+	updated timestamp(0) NULL,
+	updatedby int4 NOT NULL,
+	customer_id int4 NULL,
+	gs_company_id int4 NULL,
+	date_contact date NULL,
+	prox_date_contact date NULL,
+	contact_form varchar NULL,
+	survey varchar NULL
+);
+
+
+-- "system".gs_company definition
+
+-- Drop table
+
+-- DROP TABLE "system".gs_company;
+
+CREATE TABLE "system".gs_company (
+	gs_company_id serial NOT NULL,
+	ad_org_id int4 NOT NULL,
+	isactive varchar(1) NULL,
+	created timestamp(0) NULL,
+	createdby int4 NOT NULL,
+	updated timestamp(0) NULL,
+	updatedby int4 NOT NULL,
+	"name" varchar NULL,
+	description varchar NULL
+);
+
+
+INSERT INTO "system".gs_company (ad_org_id,isactive,created,createdby,updated,updatedby,"name",description) VALUES 
+(1,'Y','2021-04-06 12:00:00.000',1,'2021-04-06 12:00:00.000',1,'San Diego','San Diego')
+,(1,'Y','2021-04-06 12:00:00.000',1,'2021-04-06 12:00:00.000',1,'Naguanagua','Naguanagua')
+,(1,'Y','2021-04-06 12:00:00.000',1,'2021-04-06 12:00:00.000',1,'Aranzasu','Aranzasu')
+,(1,'Y','2021-04-06 12:00:00.000',1,'2021-04-06 12:00:00.000',1,'Los Samanes','Los Samanes')
+,(1,'Y','2021-04-06 12:00:00.000',1,'2021-04-06 12:00:00.000',1,'Guacara','Guacara')
+;
+
+ALTER TABLE "system".ad_notification_user DROP COLUMN date_visible;
+ALTER TABLE "system".ad_notification_user ADD date_visible date NULL;
+
+-- "system".fs_vehicle_motor definition
+
+-- Drop table
+
+-- DROP TABLE "system".fs_vehicle_motor;
+
+CREATE TABLE "system".fs_vehicle_motor (
+	fs_vehicle_motor_id serial NOT NULL,
+	ad_org_id int4 NOT NULL,
+	created timestamp NOT NULL,
+	createdby numeric(10) NOT NULL,
+	updated timestamp NOT NULL,
+	updatedby numeric(10) NOT NULL,
+	"name" varchar NULL,
+	filters varchar NULL,
+	liters numeric NULL,
+	thread varchar NULL,
+	fs_vehicle_model_id int4 NULL
+);
